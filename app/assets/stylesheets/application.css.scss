@@ -12,5 +12,14 @@
  *
  *= require_self
  */
- // Custom bootstrap variables must be set or imported *before* bootstrap.
+// bootstrap
 @import "bootstrap";
+
+// Config
+@import "config/reset";
+@import "config/variables";
+@import "config/common";
+
+// Modules
+@import "modules/post";
+

@@ -8,4 +8,17 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %div.side-content
+      %h1 TUMBLR
+      %ul
+        %li= link_to "Posts", root_path
+        %li= link_to "About"
+        %li= link_to "User Login"
+    %din.main-content
+      %div.nav-bar
+        %h3 Post Feed
+        %ul
+          %li= link_to "Make Post"
+          %li= link_to "Log Outs"
+      %div.content
+        = yield

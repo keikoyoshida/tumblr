@@ -1,1 +1,4 @@
-test
+- @posts.each do |post|
+  = link_to post_path(post) do
+    %h1.title= post.title
+    %p.date= time_ago_in_words(post.created_at)

@@ -2,5 +2,5 @@
 .row.mt-2.ml-1
   %p.date.text-secondary.small.mr-2= time_ago_in_words(@post.created_at)
   = link_to "Edit", edit_post_path(@post), class: " text-secondary small mr-2"
-  = link_to "Delete", "posts#destroy", method: :delete, data: { confirm: "Are you sure?" }, class: " text-secondary small"
+  = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: " text-secondary small"
 %p.body.mt-2= @post.body

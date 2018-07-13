@@ -1,4 +1,7 @@
+
 - @posts.each do |post|
-  = link_to post_path(post) do
-    %h1.title= post.title
-    %p.date= time_ago_in_words(post.created_at)
+  .post.container-fluid
+    = link_to post_path(post) do
+      %h1.title.text-black.text-dark= post.title
+      %p.date.text-black.mt-2.text-secondary= time_ago_in_words(post.created_at)
+    %hr

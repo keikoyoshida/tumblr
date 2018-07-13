@@ -66,3 +66,5 @@ gem 'haml-rails'
 gem 'simple_form'
 
 gem 'bootstrap', '~> 4.1.1'
+
+gem 'jquery-rails'

@@ -1,3 +1,3 @@
 %h1.title= @post.title
-%p.date= time_ago_in_words(@post.created_at)
-%p.body= @post.body
+%p.date.mt-2.text-secondary.small= time_ago_in_words(@post.created_at)
+%p.body.mt-2= @post.body

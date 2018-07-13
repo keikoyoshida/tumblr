@@ -1,0 +1,55 @@
+// Typography
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: 'Londrina Shadow', cursive;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+// Block size
+html, body {
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+}
+
+// side-content and main-content
+.content__side {
+  height: 100%;
+  padding-top: 300px;
+  padding-right: 50px;
+}
+
+.content__main__navbar {
+  height: 50px;
+}
+
+.content__main__contents {
+  padding: 30px;
+}
+
+.post {
+  height: 150px;
+}
+
+// Color
+.green {
+  background-color: $green;
+}
+
+.green-text {
+  color: $green;
+}
+
+.gray {
+  background-color: $gray;
+}
+

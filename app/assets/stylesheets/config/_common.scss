@@ -3,9 +3,16 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+h1,h2 {
+  font-family: 'Londrina Shadow', cursive;
+}
+
 h1 {
   font-size: 50px;
-  font-family: 'Londrina Shadow', cursive;
+}
+
+h2 {
+  font-size: 35px;
 }
 
 a:hover {
@@ -33,7 +40,7 @@ html, body {
 }
 
 .content__main__contents {
-  padding: 30px;
+  padding: 0 30px;
 }
 
 .post {

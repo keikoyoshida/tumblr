@@ -1,5 +1,6 @@
 %h1 Make Something
-= simple_form_for(@post, as: :post, method: :post, url: posts_path) do |f|
-  = f.input :title
-  = f.input :body
-  = f.button :submit, class: "btn btn-default green text-white"
+= render "form"
+/ = simple_form_for(@post, as: :post, method: :post, url: posts_path) do |f|
+/   = f.input :title
+/   = f.input :body
+/   = f.button :submit, class: "btn btn-default green text-white"

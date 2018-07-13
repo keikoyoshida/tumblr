@@ -1,7 +1,7 @@
-
 - @posts.each do |post|
-  .post.container-fluid
+  .post.container-fluid.mt-3
     = link_to post_path(post) do
-      %h1.title.text-black.text-dark= post.title
+      %h2.title.text-dark= post.title
+      %p.body.text-secondary= truncate(post.body, length: 100)
       %p.date.text-black.mt-2.text-secondary= time_ago_in_words(post.created_at)
     %hr

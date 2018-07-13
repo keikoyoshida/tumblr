@@ -32,8 +32,20 @@ html, body {
   height: 100%;
 }
 
+.content__main__navbar {
+  height: 50px;
+}
+
 // Color
 .green {
   background-color: $green;
+}
+
+.green-text {
+  color: $green;
+}
+
+.gray {
+  background-color: $gray;
 }
 

@@ -9,18 +9,18 @@
     = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300|Amatic+SC:700|Anton|Bangers|Caveat|Cherry+Swash:700|Corben:700|Creepster|Economica:700|Homemade+Apple|IM+Fell+DW+Pica+SC|Kaushan+Script|Londrina+Shadow|Montserrat+Subrayada|Oswald:700|Permanent+Marker|Quicksand|Roboto+Condensed:700|Teko|Vollkorn"
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body.container-fluid
-    %div.content.row
-      %div.content__side.col-md-3.green.text-white
+    .content.row
+      .content__side.col-md-3.green.text-white
         %h1.text-right.text-white TUMBLR
         %ul
           %li.text-right= link_to "Posts", root_path, class: "text-white"
           %li.text-right= link_to "About", root_path, class: "text-white"
           %li.text-right= link_to "User Login", root_path, class: "text-white"
-      %div.content__main
-        %div.content__main__navbar
-          %h3 Post Feed
-          %ul
-            %li= link_to "Make Post"
-            %li= link_to "Log Outs"
+      .content__main.col-md-9
+        .content__main__navbar.row.gray
+          %h3.content__main__navbar__header.col-md-2.mt-3.green-text Post Feed
+          %ul.col-md-3.offset-md-7.mt-2.row
+            %li= link_to "Make Post", new_post_path, class: "btn btn-default green text-white mr-2", role: "botten"
+            %li= link_to "Log Out", root_path, class: "btn btn-default green text-white"
         %div.content__main__contents
           = yield

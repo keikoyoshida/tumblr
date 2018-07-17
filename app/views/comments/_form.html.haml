@@ -1,0 +1,4 @@
+= simple_form_for [@post, @comment] do |f|
+  = f.input :name
+  = f.input :body, input_html: {rows: 5}
+  = f.button :submit, class: "btn btn-default green text-white"

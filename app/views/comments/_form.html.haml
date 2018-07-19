@@ -5,9 +5,9 @@
 = form_with model: [@post, @comment], id: "new-comment" do |f|
   .name
     = f.label :name
-    = f.text_field :name
+    = f.text_field :name, class: "commentform_name"
   .body
     = f.label :body
-    = f.text_field :body, input_html: {rows: 5}
+    = f.text_field :body, input_html: {rows: 5}, class: "commentform_body"
   .submit
     = f.button :submit, class: "btn btn-default green text-white"

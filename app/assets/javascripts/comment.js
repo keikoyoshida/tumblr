@@ -21,8 +21,7 @@ $(document).on("ajax:success", "#new-comment", function(e) {
   $('html, body').animate({
       scrollTop: $(document).height()
     },1500);
-  // $('.comments').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-  // flash();
+  alert("send your comment")
 });
 $(document).on("ajax:error", "#new-comment", function(e) {
   console.log(e.detail[2]);

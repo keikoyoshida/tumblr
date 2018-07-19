@@ -2,12 +2,12 @@
 /   = f.input :name
 /   = f.input :body, input_html: {rows: 5}
 /   = f.button :submit, class: "btn btn-default green text-white"
-= form_with model: [@post, @comment], id: "new-comment" do |f|
-  .name
+= form_with model: [@post, @comment], id: "new-comment", class: "form-group" do |f|
+  .name.mt-3
     = f.label :name
-    = f.text_field :name, class: "commentform_name"
-  .body
+    = f.text_field :name, class: "commentform_name form-control"
+  .body.mt-3
     = f.label :body
-    = f.text_field :body, input_html: {rows: 5}, class: "commentform_body"
-  .submit
+    = f.text_field :body, input_html: {rows: 5}, class: "commentform_body form-control"
+  .submit.mt-3
     = f.button :submit, class: "btn btn-default green text-white"

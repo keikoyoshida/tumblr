@@ -18,8 +18,14 @@
           %li.text-right= link_to "User Login", root_path, class: "text-white"
       .content__main.col-md-9
         .content__main__navbar.row.gray
-          %h3.content__main__navbar__header.col-md-2.mt-3.green-text Post Feed
-          %ul.col-md-3.offset-md-7.mt-2.row
+          %h3.content__main__navbar__header.col-md-4.mt-3
+            - if current_page?(root_path)
+              .green-text Post Feed
+            - elsif current_page?(about_path)
+              .green-text My Site
+            - else
+              = link_to "Back to Post Feed", root_path, class: "green-text"
+          %ul.col-md-3.offset-md-5.mt-2.row
             %li= link_to "Make Post", new_post_path, class: "btn btn-default green text-white mr-2", role: "botten"
             %li= link_to "Log Out", root_path, class: "btn btn-default green text-white"
         %div.content__main__contents

@@ -1,19 +1,6 @@
-// $(document).on('turbolinks:load', function () {
-
-//   // $('#new-comment').on('submit', function(e){
-//   //   e.preventDefault();
-//   //   var formData = new FormData(this);
-//   //   console.log(this);
-//   // });
-
-
-//   // console.log("test")
-
-// });
-
 $(document).on("ajax:success", "#new-comment", function(e) {
 // create new comment html
-  var html = buildHTML(e.detail[0].comment);
+  var html = buildHTML(e.detail[0]);
   $('.comments').append(html);
   $('.commentform_name').val('');
   $('.commentform_body').val('');
@@ -22,18 +9,20 @@ $(document).on("ajax:success", "#new-comment", function(e) {
       scrollTop: $(document).height()
     },1500);
   alert("send your comment")
+  console.log(e.detail[0]);
 });
 $(document).on("ajax:error", "#new-comment", function(e) {
   console.log(e.detail[2]);
 });
 
 
-function buildHTML(comment){
-  var html = '<h3 class ="font-weight-bold mt-4">\n'
-           + comment.name
+function buildHTML(data){
+  var html = '<h3 class ="font-weight-bold mt-4">'
+           + data.comment.name
+           + '<a class ="text-secondary small ml-2" data-method="delete" href="/posts/' + data.post_id + '/comments/' + data.comment.id + '">Delete</a>'
            + '</h3>\n'
            + '<div class ="mt-2">'
-           + comment.body
+           + data.comment.body
            + '</div>\n';
   return html;
 }

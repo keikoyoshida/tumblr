@@ -1,2 +1,4 @@
-%h3.name.font-weight-bold.mt-4= comment.name
+%h3.name.font-weight-bold.mt-4
+  = comment.name
+  = link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" }, class: " text-secondary small"
 %p.body.mt-2= comment.body
